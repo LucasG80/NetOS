@@ -17,7 +17,7 @@ if not is_admin():
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, ' '.join(sys.argv), None, 1)
     sys.exit()
 
-# Fonctions d'actions
+# Fonctions nettoyage
 def nettoyer_temporaire():
     temp_paths = [os.getenv('TEMP'), os.path.join(os.getenv('WINDIR'), 'Temp')]
     for path in temp_paths:
